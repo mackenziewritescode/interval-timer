@@ -1,0 +1,186 @@
+.drum-viewport {
+  cursor: pointer;
+  width: 50px;
+  border: 3px solid black;
+  border-radius: 6px;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 42px;
+  height: 150px;
+  margin: 0 20px;
+  z-index: 1;
+  color: black;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0.5+0,0+25,0+75,0.5+100 */
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0.5+0,0.5+14,0.25+15,0.25+34,0+35,0+65,0.25+66,0.25+85,0.5+86,0.5+100 */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), color-stop(14%, rgba(0, 0, 0, 0.5)), color-stop(15%, rgba(0, 0, 0, 0.25)), color-stop(34%, rgba(0, 0, 0, 0.25)), color-stop(35%, rgba(0, 0, 0, 0)), color-stop(65%, rgba(0, 0, 0, 0)), color-stop(66%, rgba(0, 0, 0, 0.25)), color-stop(85%, rgba(0, 0, 0, 0.25)), color-stop(86%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5)));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 14%, rgba(0, 0, 0, 0.25) 15%, rgba(0, 0, 0, 0.25) 34%, rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.25) 66%, rgba(0, 0, 0, 0.25) 85%, rgba(0, 0, 0, 0.5) 86%, rgba(0, 0, 0, 0.5) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80000000', endColorstr='#80000000',GradientType=0 );
+  /* IE6-9 */
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0.5+0,0.5+16,0.25+17,0.25+33,0+34,0+66,0.25+67,0.25+83,0.5+84,0.5+100 */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), color-stop(16%, rgba(0, 0, 0, 0.5)), color-stop(17%, rgba(0, 0, 0, 0.25)), color-stop(33%, rgba(0, 0, 0, 0.25)), color-stop(34%, rgba(0, 0, 0, 0)), color-stop(66%, rgba(0, 0, 0, 0)), color-stop(67%, rgba(0, 0, 0, 0.25)), color-stop(83%, rgba(0, 0, 0, 0.25)), color-stop(84%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5)));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 16%, rgba(0, 0, 0, 0.25) 17%, rgba(0, 0, 0, 0.25) 33%, rgba(0, 0, 0, 0) 34%, rgba(0, 0, 0, 0) 66%, rgba(0, 0, 0, 0.25) 67%, rgba(0, 0, 0, 0.25) 83%, rgba(0, 0, 0, 0.5) 84%, rgba(0, 0, 0, 0.5) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80000000', endColorstr='#80000000',GradientType=0 );
+  /* IE6-9 */
+}
+
+#wrapper {
+  font-family: sans-serif;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: scroll;
+  background: white;
+}
+
+#wrapper #app-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  width: 600px;
+  height: 400px;
+}
+
+#wrapper #app-wrap #app {
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  background: white;
+  padding: 0;
+  margin: auto;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 2fr 2fr;
+      grid-template-rows: 1fr 2fr 2fr;
+      grid-template-areas: "header header header header header" "timer1 display display display timer2" "timer1 loop-btn play-btn reset-btn timer2";
+}
+
+#wrapper #app-wrap #app h2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-area: header;
+  margin: 0;
+  text-align: center;
+  height: 100px;
+  font-size: 60px;
+  text-transform: uppercase;
+}
+
+#wrapper #app-wrap #app #left-timer-wrap {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: timer1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#wrapper #app-wrap #app #left-timer-wrap #timer1-header {
+  -webkit-writing-mode: tb-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: tb-rl;
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+  text-align: right;
+  font-size: 40px;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+
+#wrapper #app-wrap #app #display {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-area: display;
+  color: white;
+  background: black;
+  font-size: 110px;
+  font-family: sans-serif;
+  width: 100%;
+  text-align: center;
+  height: 150px;
+  line-height: 150px;
+  border-radius: 12px;
+}
+
+#wrapper #app-wrap #app button {
+  background: none;
+  color: black;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  border: 3px solid black;
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
+#wrapper #app-wrap #app button:focus {
+  outline: none;
+}
+
+#wrapper #app-wrap #app button:active {
+  color: white;
+  background: black;
+}
+
+#wrapper #app-wrap #app #loop-btn {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: loop-btn;
+}
+
+#wrapper #app-wrap #app #startStop-btn {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: play-btn;
+}
+
+#wrapper #app-wrap #app #reset-btn {
+  -ms-grid-row: 3;
+  -ms-grid-column: 4;
+  grid-area: reset-btn;
+}
+
+#wrapper #app-wrap #app #right-timer-wrap {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 5;
+  grid-area: timer2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#wrapper #app-wrap #app #right-timer-wrap #timer2-header {
+  -webkit-writing-mode: tb-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: tb-rl;
+  font-size: 40px;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+/*# sourceMappingURL=style.css.map */
