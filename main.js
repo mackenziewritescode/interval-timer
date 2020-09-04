@@ -1,30 +1,30 @@
 $(document).ready(function () {
-  let initialTime1 = 1500000;
+  let initialTime1 = 10;
   let remainingTime = initialTime1;
   let interval;
-  let startTime;
+
+  // function setInitialTime(data)
 
   function Timer() {
-    this.isOn = false;
+    this.running = false;
 
     function updateTime() {
-      let currentTime = Date.now();
-      let elapsedTime = startTime - currentTime;
-      StartTime = currentTime;
-
-      remainingTime = remainingTime - elapsedTime;
-      console.log(remainingTime);
+      if (remainingTime > 0) {
+        remainingTime = remainingTime - 1;
+        console.log(remainingTime);
+      } else {
+        remainingTime = 0;
+      }
     }
 
     this.startStop = function () {
-      if (this.isOn) {
+      if (this.running) {
         clearInterval(interval);
         interval = null;
-        this.isOn = false;
+        this.running = false;
       } else {
         interval = setInterval(updateTime, 1000);
-        startTime = Date.now();
-        this.isOn = true;
+        this.running = true;
       }
     };
 
@@ -38,7 +38,7 @@ $(document).ready(function () {
     max: 60,
     value: 25,
     change: function (event, data) {
-      initialTime1 = data.value * 60000;
+      initialTime1 = data.value * 60;
       console.log(initialTime1);
     },
   });
@@ -49,6 +49,9 @@ $(document).ready(function () {
     value: 5,
   });
 
-  // let go = new Timer();
-  // go.startStop();
+  let timer = new Timer();
+
+  $("#start-btn").click(function () {
+    timer.startStop();
+  });
 });

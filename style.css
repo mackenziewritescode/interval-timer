@@ -152,7 +152,7 @@
   grid-area: loop-btn;
 }
 
-#wrapper #app-wrap #app #startStop-btn {
+#wrapper #app-wrap #app #start-btn {
   -ms-grid-row: 3;
   -ms-grid-column: 3;
   grid-area: play-btn;
