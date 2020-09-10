@@ -147,6 +147,10 @@
   height: 50px;
 }
 
+#wrapper #app-wrap #app img {
+  height: 40px;
+}
+
 #wrapper #app-wrap #app #right-timer-wrap {
   -ms-grid-row: 2;
   -ms-grid-row-span: 2;

@@ -1,162 +1,166 @@
 #wrapper {
-   font-family: sans-serif;
-   position: fixed;
-   display: flex;
-   left: 0px;
-   top: 0px;
-   width: 100%;
-   height: 100%;
-   flex-direction: column;
-   overflow: scroll;
-   background: white;
+  font-family: sans-serif;
+  position: fixed;
+  display: flex;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  overflow: scroll;
+  background: white;
 
-   #app-wrap {
-      display: flex;
+  #app-wrap {
+    display: flex;
+    margin: auto;
+    width: 600px;
+    height: 400px;
+    //flex: 0 0 auto;
+
+    #app {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      background: white;
+      padding: 0;
       margin: auto;
-      width: 600px;
-      height: 400px;
-      //flex: 0 0 auto;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 2fr 2fr;
+      grid-template-areas:
+        "header header header header header"
+        "timer1 display display display timer2"
+        "timer1 loop-btn play-btn reset-btn timer2";
 
-      #app {
-         width: 100%;
-         height: 100%;
-         display: grid;
-         background: white;
-         padding: 0;
-         margin: auto;
-         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-         grid-template-rows: 1fr 2fr 2fr;
-         grid-template-areas:
-            "header header header header header"
-            "timer1 display display display timer2"
-            "timer1 loop-btn play-btn reset-btn timer2";
-
-         h2 {
-            grid-area: header;
-            margin: 0;
-            text-align: center;
-            height: 100px;
-            font-size: 60px;
-            text-transform: uppercase;
-         }
-
-         .timer-wrap {
-            display: flex;
-
-            .timer p {
-               font-size: 33px;
-               text-align: center;
-               margin: 0;
-            }
-         }
-
-         #left-timer-wrap {
-            grid-area: timer1;
-
-            #timer1-header {
-               writing-mode: tb-rl;
-               transform: rotate(-180deg);
-               text-align: right;
-               font-size: 40px;
-               text-transform: uppercase;
-               margin: 0;
-               padding: 0;
-            }
-            #timer1 {
-            }
-         }
-         #display {
-            grid-area: display;
-            color: white;
-            background: black;
-            font-size: 110px;
-            font-family: sans-serif;
-            //font-weight: bold;
-            width: 100%;
-            text-align: center;
-            height: 150px;
-            line-height: 150px;
-            // border: 4px solid black;
-            border-radius: 12px;
-
-            // /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e4f5fc+0,bfe8f9+11,9fd8ef+22,004ce5+100 */
-            // background: rgb(228, 245, 252); /* Old browsers */
-            // background: -moz-linear-gradient(
-            //   -45deg,
-            //   rgba(228, 245, 252, 1) 0%,
-            //   rgba(191, 232, 249, 1) 11%,
-            //   rgba(159, 216, 239, 1) 22%,
-            //   rgba(0, 76, 229, 1) 100%
-            // ); /* FF3.6-15 */
-            // background: -webkit-linear-gradient(
-            //   -45deg,
-            //   rgba(228, 245, 252, 1) 0%,
-            //   rgba(191, 232, 249, 1) 11%,
-            //   rgba(159, 216, 239, 1) 22%,
-            //   rgba(0, 76, 229, 1) 100%
-            // ); /* Chrome10-25,Safari5.1-6 */
-            // background: linear-gradient(
-            //   135deg,
-            //   rgba(228, 245, 252, 1) 0%,
-            //   rgba(191, 232, 249, 1) 11%,
-            //   rgba(159, 216, 239, 1) 22%,
-            //   rgba(0, 76, 229, 1) 100%
-            // ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-            // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4f5fc', endColorstr='#004ce5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-         }
-
-         button {
-            background: none;
-            color: black;
-            border: none;
-            padding: 0;
-            font: inherit;
-            cursor: pointer;
-            border: 3px solid black;
-            width: 80px;
-            height: 80px;
-            margin: auto;
-            margin-top: 30px;
-            border-radius: 10px;
-         }
-         button:focus {
-            outline: none;
-         }
-         button:active {
-            color: white;
-            background: black;
-         }
-
-         #loop-btn {
-            grid-area: loop-btn;
-         }
-         #start-btn {
-            grid-area: play-btn;
-         }
-         #reset-btn {
-            grid-area: reset-btn;
-         }
-
-         .val-btn {
-            margin: 0 10px;
-            height: 50px;
-         }
-
-         #right-timer-wrap {
-            grid-area: timer2;
-
-            #timer2-header {
-               writing-mode: tb-rl;
-               font-size: 40px;
-               text-transform: uppercase;
-               margin: 0;
-               padding: 0;
-            }
-            #timer2 {
-            }
-         }
+      h2 {
+        grid-area: header;
+        margin: 0;
+        text-align: center;
+        height: 100px;
+        font-size: 60px;
+        text-transform: uppercase;
       }
-   }
+
+      .timer-wrap {
+        display: flex;
+
+        .timer p {
+          font-size: 33px;
+          text-align: center;
+          margin: 0;
+        }
+      }
+
+      #left-timer-wrap {
+        grid-area: timer1;
+
+        #timer1-header {
+          writing-mode: tb-rl;
+          transform: rotate(-180deg);
+          text-align: right;
+          font-size: 40px;
+          text-transform: uppercase;
+          margin: 0;
+          padding: 0;
+        }
+        #timer1 {
+        }
+      }
+      #display {
+        grid-area: display;
+        color: white;
+        background: black;
+        font-size: 110px;
+        font-family: sans-serif;
+        //font-weight: bold;
+        width: 100%;
+        text-align: center;
+        height: 150px;
+        line-height: 150px;
+        // border: 4px solid black;
+        border-radius: 12px;
+
+        // /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e4f5fc+0,bfe8f9+11,9fd8ef+22,004ce5+100 */
+        // background: rgb(228, 245, 252); /* Old browsers */
+        // background: -moz-linear-gradient(
+        //   -45deg,
+        //   rgba(228, 245, 252, 1) 0%,
+        //   rgba(191, 232, 249, 1) 11%,
+        //   rgba(159, 216, 239, 1) 22%,
+        //   rgba(0, 76, 229, 1) 100%
+        // ); /* FF3.6-15 */
+        // background: -webkit-linear-gradient(
+        //   -45deg,
+        //   rgba(228, 245, 252, 1) 0%,
+        //   rgba(191, 232, 249, 1) 11%,
+        //   rgba(159, 216, 239, 1) 22%,
+        //   rgba(0, 76, 229, 1) 100%
+        // ); /* Chrome10-25,Safari5.1-6 */
+        // background: linear-gradient(
+        //   135deg,
+        //   rgba(228, 245, 252, 1) 0%,
+        //   rgba(191, 232, 249, 1) 11%,
+        //   rgba(159, 216, 239, 1) 22%,
+        //   rgba(0, 76, 229, 1) 100%
+        // ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4f5fc', endColorstr='#004ce5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+      }
+
+      button {
+        background: none;
+        color: black;
+        border: none;
+        padding: 0;
+        font: inherit;
+        cursor: pointer;
+        border: 3px solid black;
+        width: 80px;
+        height: 80px;
+        margin: auto;
+        margin-top: 30px;
+        border-radius: 10px;
+      }
+      button:focus {
+        outline: none;
+      }
+      button:active {
+        color: white;
+        background: black;
+      }
+
+      #loop-btn {
+        grid-area: loop-btn;
+      }
+      #start-btn {
+        grid-area: play-btn;
+      }
+      #reset-btn {
+        grid-area: reset-btn;
+      }
+
+      .val-btn {
+        margin: 0 10px;
+        height: 50px;
+      }
+
+      img {
+        height: 40px;
+      }
+
+      #right-timer-wrap {
+        grid-area: timer2;
+
+        #timer2-header {
+          writing-mode: tb-rl;
+          font-size: 40px;
+          text-transform: uppercase;
+          margin: 0;
+          padding: 0;
+        }
+        #timer2 {
+        }
+      }
+    }
+  }
 }
 
 // .drum-viewport {
