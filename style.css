@@ -14,6 +14,16 @@
           flex-direction: column;
   overflow: scroll;
   background: white;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+50,d1eeff+100 */
+  background: white;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(50%, white), to(#d1eeff));
+  background: linear-gradient(to bottom, white 0%, white 50%, #d1eeff 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d1eeff',GradientType=0 );
+  /* IE6-9 */
 }
 
 #wrapper #app-wrap {
@@ -30,14 +40,13 @@
   height: 100%;
   display: -ms-grid;
   display: grid;
-  background: white;
   padding: 0;
   margin: auto;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-columns: 120px 120px 120px 120px 120px;
+      grid-template-columns: 120px 120px 120px 120px 120px;
   -ms-grid-rows: 1fr 2fr 2fr;
       grid-template-rows: 1fr 2fr 2fr;
-      grid-template-areas: "header header header header header" "timer1 display display display timer2" "timer1 loop-btn play-btn reset-btn timer2";
+      grid-template-areas: "header header header header header" "timer1 display display display timer2" ". loop-btn play-btn reset-btn .";
 }
 
 #wrapper #app-wrap #app h2 {
@@ -48,7 +57,7 @@
   margin: 0;
   text-align: center;
   height: 100px;
-  font-size: 60px;
+  font-size: 72px;
   text-transform: uppercase;
 }
 
@@ -59,14 +68,13 @@
 }
 
 #wrapper #app-wrap #app .timer-wrap .timer p {
-  font-size: 33px;
+  font-size: 40px;
   text-align: center;
-  margin: 0;
+  margin: 3px 0 2px 0;
 }
 
 #wrapper #app-wrap #app #left-timer-wrap {
   -ms-grid-row: 2;
-  -ms-grid-row-span: 2;
   -ms-grid-column: 1;
   grid-area: timer1;
 }
@@ -78,10 +86,12 @@
   -webkit-transform: rotate(-180deg);
           transform: rotate(-180deg);
   text-align: right;
-  font-size: 40px;
+  font-size: 38px;
   text-transform: uppercase;
+  text-align: center;
   margin: 0;
   padding: 0;
+  float: left;
 }
 
 #wrapper #app-wrap #app #display {
@@ -93,11 +103,22 @@
   background: black;
   font-size: 110px;
   font-family: sans-serif;
-  width: 100%;
+  width: 318px;
   text-align: center;
-  height: 150px;
+  height: 144px;
   line-height: 150px;
+  border: 3px solid black;
   border-radius: 12px;
+  margin: 0 auto;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e4f5fc+0,bfe8f9+11,9fd8ef+22,004ce5+100 */
+  background: #e4f5fc;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #e4f5fc 0%, #bfe8f9 11%, #9fd8ef 22%, #004ce5 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4f5fc', endColorstr='#004ce5',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
 }
 
 #wrapper #app-wrap #app button {
@@ -111,8 +132,9 @@
   width: 80px;
   height: 80px;
   margin: auto;
-  margin-top: 30px;
+  margin-top: 25px;
   border-radius: 10px;
+  background: white;
 }
 
 #wrapper #app-wrap #app button:focus {
@@ -120,8 +142,7 @@
 }
 
 #wrapper #app-wrap #app button:active {
-  color: white;
-  background: black;
+  background: #ffe77b;
 }
 
 #wrapper #app-wrap #app #loop-btn {
@@ -143,17 +164,28 @@
 }
 
 #wrapper #app-wrap #app .val-btn {
-  margin: 0 10px;
+  margin: 0;
   height: 50px;
+  width: 70px;
+}
+
+#wrapper #app-wrap #app .no-click {
+  background: #e6e6e6;
+  cursor: default;
+}
+
+#wrapper #app-wrap #app .no-click:active {
+  color: black;
+  background: #e6e6e6;
 }
 
 #wrapper #app-wrap #app img {
   height: 40px;
+  fill: blue;
 }
 
 #wrapper #app-wrap #app #right-timer-wrap {
   -ms-grid-row: 2;
-  -ms-grid-row-span: 2;
   -ms-grid-column: 5;
   grid-area: timer2;
 }
@@ -162,9 +194,16 @@
   -webkit-writing-mode: tb-rl;
       -ms-writing-mode: tb-rl;
           writing-mode: tb-rl;
-  font-size: 40px;
+  font-size: 38px;
   text-transform: uppercase;
+  text-align: center;
   margin: 0;
   padding: 0;
+  margin-left: 5px;
+}
+
+#wrapper #app-wrap #app #right-timer-wrap #timer2 {
+  margin-left: 7px;
+  margin-right: -4px;
 }
 /*# sourceMappingURL=style.css.map */

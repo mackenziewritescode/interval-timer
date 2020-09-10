@@ -10,9 +10,9 @@ $(document).ready(function () {
   let loop = true;
   let audio = new Audio("audio/alarm.wav");
 
+  // Set displayed values
   $("#timer1-val").html(time1);
   $("#timer2-val").html(time2);
-
   $("#display").html(formatTime(time1 * 60));
 
   function setTimer(timer, direction) {
@@ -100,10 +100,16 @@ $(document).ready(function () {
       interval = null;
       running = false;
       $("#play-img").attr("src", "/icons/play.svg");
+      $(
+        "#reset-btn, #timer1-incr, #timer1-decr, #timer2-incr, #timer2-decr"
+      ).removeClass("no-click");
     } else {
       interval = setInterval(updateTime, 1000);
       running = true;
       $("#play-img").attr("src", "/icons/pause.svg");
+      $(
+        "#reset-btn, #timer1-incr, #timer1-decr, #timer2-incr, #timer2-decr"
+      ).addClass("no-click");
     }
     audio.pause();
     audio.currentTime = 0;
