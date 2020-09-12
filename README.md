@@ -43,7 +43,7 @@ if (currentTimer1) {
 ```
 The variable `currentTimer1` is checks to see if `timer1` is the current timer running.
 
-Let's look at one more funciton of particular interest: Setting the time on the timers. This wouldn't normally be too complicated, but since the app will update the displayed time depending on which timer is being adjusted, we need know which timer is running. To do this, we pass the variable `timer` to the function, and depending on which button is pressed, it will be set to either `timer1` or `timer2`. Of course we also need to know whether we want to increment or decrement the value, so we pass another variable `direction`. To make check if the timer that's running is the same timer that's being adjusted, we check
+Let's look at one more funciton of particular interest: Setting the time on the timers. This wouldn't normally be too complicated, but since the app will update the displayed time depending on which timer is being adjusted, we need know which timer is running. To do this, we pass the variable `timer` to the function, and depending on which button is pressed, it will be set to either `timer1` or `timer2`. Of course we also need to know whether we want to increment or decrement the value, so we pass another variable `direction`. To see if the timer that's running is the same timer that's being adjusted, we check
 ```
 if (currentTimer1 && timer === "timer1")
 ```
