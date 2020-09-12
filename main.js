@@ -72,7 +72,7 @@ $(document).ready(function () {
         clearInterval(interval);
         interval = null;
         running = false;
-        $("#play-img").attr("src", "/icons/play.svg");
+        $("#play-img").attr("src", "icons/play.svg");
         $(
           "#reset-btn, #timer1-incr, #timer1-decr, #timer2-incr, #timer2-decr"
         ).removeClass("no-click");
@@ -102,14 +102,14 @@ $(document).ready(function () {
       clearInterval(interval);
       interval = null;
       running = false;
-      $("#play-img").attr("src", "/icons/play.svg");
+      $("#play-img").attr("src", "icons/play.svg");
       $(
         "#reset-btn, #timer1-incr, #timer1-decr, #timer2-incr, #timer2-decr"
       ).removeClass("no-click");
     } else {
       interval = setInterval(updateTime, 1000);
       running = true;
-      $("#play-img").attr("src", "/icons/pause.svg");
+      $("#play-img").attr("src", "icons/pause.svg");
       $(
         "#reset-btn, #timer1-incr, #timer1-decr, #timer2-incr, #timer2-decr"
       ).addClass("no-click");
@@ -120,10 +120,10 @@ $(document).ready(function () {
 
   function setLoop() {
     if (loop) {
-      $("#loop-img").attr("src", "/icons/loop-off.svg");
+      $("#loop-img").attr("src", "icons/loop-off.svg");
       loop = false;
     } else {
-      $("#loop-img").attr("src", "/icons/loop.svg");
+      $("#loop-img").attr("src", "icons/loop.svg");
       loop = true;
     }
   }
