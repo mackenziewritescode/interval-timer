@@ -34,7 +34,7 @@ $(document).ready(function () {
             time2 += 1;
           }
         } else if (direction === "down") {
-          if (time2 > 1) {
+          if (time2 > 0) {
             time2 -= 1;
           }
         }
@@ -73,6 +73,9 @@ $(document).ready(function () {
         interval = null;
         running = false;
         $("#play-img").attr("src", "/icons/play.svg");
+        $(
+          "#reset-btn, #timer1-incr, #timer1-decr, #timer2-incr, #timer2-decr"
+        ).removeClass("no-click");
         remainingSeconds = time1 * 60;
       }
       // play audio

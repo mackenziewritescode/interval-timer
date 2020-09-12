@@ -17,6 +17,9 @@
   </head>
   <body>
     <div id="wrapper">
+      <a class="portfolio" href="http://www.sunkenworld.com/about/">
+        <p class="portfolio-text">Back to portfolio</p>
+      </a>
       <div id="app-wrap">
         <div id="app">
           <h2>Interval Timer</h2>
@@ -36,7 +39,7 @@
           <button class="control-btn" id="loop-btn" title="Toggle Loop">
             <img id="loop-img" src="/icons/loop.svg" />
           </button>
-          <button class="control-btn" id="start-btn" title="Play/Pause">
+          <button class="control-btn" id="start-btn" title="Start/Pause">
             <img id="play-img" src="/icons/play.svg" />
           </button>
           <button class="control-btn" id="reset-btn" title="Reset">
@@ -54,8 +57,31 @@
             </div>
             <h3 id="timer2-header">Timer 2</h3>
           </div>
+          <div id="info">
+            <p>
+              Set the length of each timer. Press start. When Timer 1 finishes,
+              Timer 2 will start automatically. When Timer 2 finishes, the cycle
+              will repeat if Loop is turned on. If Loop is off, the timer will
+              stop. If you only want one timer, set Timer 2 to zero.
+            </p>
+            <p>
+              If you want to learn about this app, check out the README and code
+              over on
+              <a href="https://github.com/mackenziewritescode/interval-timer">
+                Github</a
+              >.
+            </p>
+          </div>
         </div>
       </div>
+      <footer id="footer">
+        <p>
+          This site was made by
+          <a class="footer-link" href="http://www.sunkenworld.com/about/">
+            Mackenzie Charlton</a
+          >.
+        </p>
+      </footer>
     </div>
   </body>
 </html>
