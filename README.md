@@ -43,7 +43,59 @@ if (currentTimer1) {
 ```
 The variable `currentTimer1` is checks to see if `timer1` is the current timer running.
 
-Let's look at one more funciton of particular interest: Setting the time on the timers. This wouldn't be too complicated, but 
+Let's look at one more funciton of particular interest: Setting the time on the timers. This wouldn't normally be too complicated, but since the app will update the displayed time depending on which timer is being adjusted, we need know which timer is running. To do this, we pass the variable `timer` to the function, and depending on which button is pressed, it will be set to either `timer1` or `timer2`. Of course we also need to know whether we want to increment or decrement the value, so we pass another variable `direction`. To make check if the timer that's running is the same timer that's being adjusted, we check
+```
+if (currentTimer1 && timer === "timer1")
+```
+and 
+```
+else if (!currentTimer1 && timer === "timer2")
+```
+If neither of these conditions are met, then we don't need to update the display. The whole function looks like this:
+```
+function setTimer(timer, direction) {
+    if (!running) {
+      if (timer === "timer1") {
+        if (direction === "up") {
+          if (time1 < 60) {
+            time1 += 1;
+          }
+        } else if (direction === "down") {
+          if (time1 > 1) {
+            time1 -= 1;
+          }
+        }
+      }
+      if (timer === "timer2") {
+        if (direction === "up") {
+          if (time2 < 60) {
+            time2 += 1;
+          }
+        } else if (direction === "down") {
+          if (time2 > 0) {
+            time2 -= 1;
+          }
+        }
+      }
+      // if the current timer is timer1, setting timer1 will reset the running time on display and vice versa
+      if (currentTimer1 && timer === "timer1") {
+        remainingSeconds = time1 * 60;
+        $("#display").html(formatTime(time1 * 60));
+      } else if (!currentTimer1 && timer === "timer2") {
+        remainingSeconds = time2 * 60;
+        $("#display").html(formatTime(time2 * 60));
+      }
+      // setting the time on the timers
+      $("#timer1-val").html(time1);
+      $("#timer2-val").html(time2);
+    }
+  }
+```
 
+***
+
+There is, of course, lots more going on, but this was just a look at the slightly more complex aspects. If you want to see the rest of the code, please do have a look at `index.html`, `main.js`, and `style.scss`. Thanks for reading!
+
+***
 
 (The icons were downloaded from www.flaticons.com from the user Freepik under the Flaticon License.)
