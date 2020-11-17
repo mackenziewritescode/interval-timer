@@ -1,7 +1,7 @@
 
 # JavaScript Interval Timer
 
-Check it out [here](https://mackenziewritescode.github.io/interval-timer/).
+Check it out [here](https://www.sunkenworld.com/interval-timer).
 
 This app was written as an exercise in vanilla JavaScript. Ironically I ended up using some jQuery, but that was mostly just to reduce the clutter of having to write "document.getElementById..." and "addEventListener..." dozens of times. You know how it is.
 
@@ -95,7 +95,7 @@ function setTimer(timer, direction) {
 
 There is, of course, lots more going on, but this was just a look at the slightly more complex aspects. If you want to see the rest of the code, please do have a look at `index.html`, `main.js`, and `style.scss`. 
 
-Thanks for reading!
+Check out my portfolio at https://www.sunkenworld.com/ if you want to see more of my work. Thanks for reading!
 
 ***
 
