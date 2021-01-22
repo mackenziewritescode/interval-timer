@@ -1,25 +1,6 @@
-@font-face {
-  font-family: "Helvetica";
-  src: url("./fonts/HelveticaNeueLTStd-Roman.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "HelveticaBold";
-  src: url("./fonts/HelveticaNeueLTStd-Bd.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "HelveticaBlack";
-  src: url("./fonts/HelveticaNeueLTStd-Blk.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "HelveticaLight";
-  src: url("./fonts/HelveticaLTStd-Light.otf") format("opentype");
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap");
 #wrapper {
-  font-family: "Helvetica", sans-serif;
+  font-family: "Roboto", sans-serif;
   position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -144,7 +125,7 @@
       grid-template-areas: "header header header header header" "timer1 display display display timer2" ". loop-btn play-btn reset-btn .";
 }
 
-#wrapper #app-wrap #app h2 {
+#wrapper #app-wrap #app #title {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 5;
@@ -152,7 +133,7 @@
   margin: 0;
   text-align: center;
   height: 100px;
-  font-size: 76px;
+  font-size: 84px;
   text-transform: uppercase;
 }
 
@@ -200,7 +181,7 @@
   width: 318px;
   text-align: center;
   height: 144px;
-  line-height: 140px;
+  line-height: 160px;
   border: 3px solid black;
   border-radius: 12px;
   margin: 0 auto;
