@@ -1,11 +1,11 @@
 
 # JavaScript Interval Timer
 
-Check it out [here](https://www.sunkenworld.com/interval-timer).
+A simple interval timer app. Check it out [here](https://www.sunkenworld.com/interval-timer).
 
 This app was written as an exercise in vanilla JavaScript. Ironically I ended up using some jQuery, but that was mostly just to reduce the clutter of having to write "document.getElementById..." and "addEventListener..." dozens of times. You know how it is.
 
-This simple timer app is made a bit more complex through the introduction of a second timer. The main timing functionality uses JavaScript's `setInterval()` method to run a function that updates the time every second, and clears the interval upon pausing. The time displayed is derived from the variable `secondsRemaining`, which is initially set to be the value of Timer 1, `timer1`. Most of the time, this function simply runs
+This basic timer is made a bit more complex through the introduction of a second timer. The main timing functionality uses JavaScript's `setInterval()` method to run a function that updates the time every second, and clears the interval upon pausing. The time displayed is derived from the variable `secondsRemaining`, which is initially set to be the value of Timer 1, `timer1`. Most of the time, this function simply runs
 ```
 remainingSeconds = remainingSeconds - 1;
 $("#display").html(formatTime(remainingSeconds));  // updates the display with the current time remaining
